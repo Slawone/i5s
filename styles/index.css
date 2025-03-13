@@ -431,7 +431,7 @@ body.active {
   align-items: center;
 }
 .hero__title {
-  font-size: clamp(1.8rem, 2.6041666667vw, 5rem);
+  font-size: clamp(2rem, 2.6041666667vw, 5rem);
   font-weight: 700;
   color: #000;
   margin-bottom: 3rem;
@@ -472,6 +472,9 @@ body.active {
   }
 }
 @media screen and (width < 1024px) {
+  .hero {
+    height: calc(100vh - 70px);
+  }
   .hero__title {
     margin-bottom: 2rem;
   }
@@ -480,114 +483,117 @@ body.active {
   }
 }
 @media screen and (width < 768px) {
+  .hero {
+    height: calc(100vh - 50px);
+  }
   .hero__title {
     margin-bottom: 1.4rem;
   }
 }
-.faq__list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.about {
+  padding: 5rem 0;
+  background-color: #00B6CC;
+}
+.about__title {
+  color: #fff;
+  font-size: clamp(1.8rem, 2.0833333333vw, 4rem);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.about__copy {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding: 2rem;
+  color: #fff;
+  font-size: clamp(1.6rem, 1.25vw, 2.4rem);
+  text-align: center;
+  border: 1px solid #fff;
+  box-shadow: 5px 5px 15px #fff, -5px -5px 15px #fff;
 }
 
-.faq__list-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 15px 13px;
-  background-color: var(--white-color);
+@media screen and (width < 768px) {
+  .about {
+    padding: 3rem 0;
+  }
+}
+.possibilities {
+  padding: 5rem 0;
+}
+.possibilities__title {
+  color: #00B6CC;
+  font-size: clamp(1.8rem, 2.0833333333vw, 4rem);
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
-.faq__list-btn {
+.card-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.card {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #00B6CC;
+  border-radius: 1.6rem;
+}
+.card__image {
   width: 100%;
-  align-items: center;
-  background: none;
-  border: none;
+  height: 16rem;
+  border: 1px solid #00B6CC;
+  border-radius: 1.6rem;
+  margin-bottom: 2rem;
 }
-
-.faq__list-title {
-  font-family: "Arial";
-  font-style: normal;
+.card__title {
+  font-size: clamp(1.6rem, 1.25vw, 2.4rem);
   font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  color: #1C1A1A;
+  margin-bottom: 1rem;
+}
+.card__text {
+  font-size: clamp(1.4rem, 0.9375vw, 1.8rem);
+  margin-bottom: 5rem;
+}
+.card__btn {
+  width: 100%;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 1.4rem 0;
+  color: #fff;
+  background-color: #00B6CC;
+  border: 1px solid #00B6CC;
+  border-radius: 1.6rem;
+  transition: color 0.5s, background-color 0.5s;
+}
+.card__btn:hover {
+  color: #00B6CC;
+  background-color: transparent;
 }
 
-.faq__list-text {
-  height: 0;
-  overflow: hidden;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 700;
-  color: #1C1A1A;
-  width: 90%;
-  align-self: flex-start;
-  transition: all 0.4s ease;
-}
-
-.faq__list-item_active .faq__list-text {
-  height: auto;
-}
-
-.faq__list-img {
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-}
-
-/* .faq__list-img circle {
-  fill: #fff;
-  stroke: #fff;
-} */
-@media (min-width: 768px) {
-  .faq__list {
-    gap: 16px;
-  }
-  .faq__list-item {
-    padding: 24px 65px 24px 54px;
-    font-size: 18px;
-    line-height: 24px;
-  }
-  .faq__list-img {
-    width: 46px;
-    height: 46px;
+@media screen and (width < 1024px) {
+  .card-box {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 1024px) {
-  .faq__list-item {
-    padding: 24px 20px 24px 25px;
-    font-size: 20px;
-    line-height: 24px;
+@media screen and (width < 768px) {
+  .possibilities {
+    padding: 3rem 0;
   }
-  .faq__list-img {
-    transition: transform 0.2s ease-in-out;
-  }
-  .faq__list-img:hover {
-    transform: scale(1.2);
-  }
-  .faq__list-item:nth-child(even) {
-    background-color: #440F51;
-  }
-  .faq__list-item:nth-child(even) .faq__list-title,
-  .faq__list-item:nth-child(even) .faq__list-text {
-    color: var(--white-color);
-  }
-  .faq__list-img_white path,
-  .faq__list-img_white circle {
-    stroke: #fff;
+  .card-box {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 1440px) {
-  .faq__list {
-    gap: 20px;
+@media screen and (width < 568px) {
+  .card-box {
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
-  .faq__list-item {
-    padding: 30px 70px;
-    font-size: 24px;
-    line-height: 28px;
+  .card {
+    width: 32rem;
   }
 }
 
