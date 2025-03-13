@@ -422,12 +422,12 @@ body.active {
   position: relative;
   width: 100%;
   height: calc(100vh - 85px);
-  padding-top: 20rem;
 }
 .hero__wrapper {
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .hero__title {
@@ -439,6 +439,7 @@ body.active {
 .hero__subtitle {
   font-size: clamp(1.6rem, 1.5625vw, 3rem);
   text-align: center;
+  margin-bottom: 15rem;
 }
 .hero__link-down {
   display: flex;
@@ -447,8 +448,6 @@ body.active {
   gap: 1rem;
   width: 5rem;
   margin-inline: auto;
-  margin-top: auto;
-  margin-bottom: 5rem;
 }
 .hero__link-down p {
   font-size: 2rem;
@@ -476,16 +475,13 @@ body.active {
   .hero__title {
     margin-bottom: 2rem;
   }
-  .hero__link-down {
-    margin-bottom: 3rem;
+  .hero__subtitle {
+    margin-bottom: 10rem;
   }
 }
 @media screen and (width < 768px) {
   .hero__title {
     margin-bottom: 1.4rem;
-  }
-  .hero__link-down {
-    margin-bottom: 2rem;
   }
 }
 
