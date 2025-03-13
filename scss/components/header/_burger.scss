@@ -1,0 +1,32 @@
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  &__stick {
+    width: 30px;
+    height: 2px;
+    background-color: $second-color;
+  }
+  &.active {
+    position: relative;
+    padding: 10px 0;
+    .burger__stick_top {
+      position: absolute;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+    }
+    .burger__stick_middle {
+      display: none;
+    }
+    .burger__stick_bottom {
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease;
+    }
+  }
+}
+
+@media screen and (width < $breakpoint-md) {
+  .burger {
+    display: flex;
+  }
+}

@@ -1,0 +1,85 @@
+@import 'hero-area';
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - $heigth-header-xl);
+  padding-top: 20rem;
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    @include fluid-text(1.8, 5);
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 3rem;
+  }
+  &__subtitle {
+    @include fluid-text(1.6, 3);
+    text-align: center;
+  }
+  &__link-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 5rem;
+    margin-inline: auto;
+    margin-top: auto;
+    margin-bottom: 5rem;
+
+    p {
+      font-size: 2rem;
+      color: $main-color;
+    }
+
+    img {
+      width: 5rem;
+      height: 5rem;
+      padding: 1rem;
+      border: 2px solid $second-color;
+      border-radius: 50%;
+      fill: $second-color;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (width > $breakpoint-lg) {
+  .hero {
+    &__link-down {
+      img {
+        transition: transform 0.5s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+@media screen and (width < $breakpoint-lg) {
+  .hero {
+    &__title {
+      margin-bottom: 2rem;
+    }
+    &__link-down {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media screen and (width < $breakpoint-md) {
+  .hero {
+    &__title {
+      margin-bottom: 1.4rem;
+    }
+    &__link-down {
+      margin-bottom: 2rem;
+    }
+  }
+}

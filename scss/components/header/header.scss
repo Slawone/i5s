@@ -1,0 +1,41 @@
+@import 'nav';
+@import 'burger';
+@import 'button-open-form';
+
+.header {
+  height: $heigth-header-xl;
+  background-color: $white-color;
+  border-bottom: 1px solid $main-color;
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (width < $breakpoint-lg) {
+  .header {
+    height: $heigth-header-lg;
+
+    &__logo {
+      width: 8.5rem;
+    }
+  }
+}
+
+@media screen and (width < $breakpoint-md) {
+  .header {
+    height: $heigth-header-md;
+
+    &__logo {
+      width: 7rem;
+    }
+  }
+}
