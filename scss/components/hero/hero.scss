@@ -14,7 +14,7 @@
     align-items: center;
   }
   &__title {
-    @include fluid-text(1.8, 5);
+    @include fluid-text(2, 5);
     font-weight: 700;
     color: #000;
     margin-bottom: 3rem;
@@ -64,6 +64,7 @@
 }
 @media screen and (width < $breakpoint-lg) {
   .hero {
+    height: calc(100vh - $heigth-header-lg);
     &__title {
       margin-bottom: 2rem;
     }
@@ -76,6 +77,7 @@
 
 @media screen and (width < $breakpoint-md) {
   .hero {
+    height: calc(100vh - $heigth-header-md);
     &__title {
       margin-bottom: 1.4rem;
     }

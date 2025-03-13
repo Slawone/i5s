@@ -1,0 +1,27 @@
+.about {
+  padding: 5rem 0;
+  background-color: $second-color;
+
+  &__title {
+    color: $white-color;
+    @include fluid-text(1.8, 4);
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  &__copy {
+    max-width: 80rem;
+    margin-inline: auto;
+    padding: 2rem;
+    color: $white-color;
+    @include fluid-text(1.6, 2.4);
+    text-align: center;
+    border: 1px solid $white-color;
+    box-shadow: 5px 5px 15px $white-color, -5px -5px 15px $white-color;
+  }
+}
+
+@media screen and (width < $breakpoint-md) {
+  .about {
+    padding: 3rem 0;
+  }
+}

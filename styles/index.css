@@ -431,7 +431,7 @@ body.active {
   align-items: center;
 }
 .hero__title {
-  font-size: clamp(1.8rem, 2.6041666667vw, 5rem);
+  font-size: clamp(2rem, 2.6041666667vw, 5rem);
   font-weight: 700;
   color: #000;
   margin-bottom: 3rem;
@@ -472,6 +472,9 @@ body.active {
   }
 }
 @media screen and (width < 1024px) {
+  .hero {
+    height: calc(100vh - 70px);
+  }
   .hero__title {
     margin-bottom: 2rem;
   }
@@ -480,8 +483,117 @@ body.active {
   }
 }
 @media screen and (width < 768px) {
+  .hero {
+    height: calc(100vh - 50px);
+  }
   .hero__title {
     margin-bottom: 1.4rem;
+  }
+}
+.about {
+  padding: 5rem 0;
+  background-color: #00B6CC;
+}
+.about__title {
+  color: #fff;
+  font-size: clamp(1.8rem, 2.0833333333vw, 4rem);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.about__copy {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding: 2rem;
+  color: #fff;
+  font-size: clamp(1.6rem, 1.25vw, 2.4rem);
+  text-align: center;
+  border: 1px solid #fff;
+  box-shadow: 5px 5px 15px #fff, -5px -5px 15px #fff;
+}
+
+@media screen and (width < 768px) {
+  .about {
+    padding: 3rem 0;
+  }
+}
+.possibilities {
+  padding: 5rem 0;
+}
+.possibilities__title {
+  color: #00B6CC;
+  font-size: clamp(1.8rem, 2.0833333333vw, 4rem);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.card-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #00B6CC;
+  border-radius: 1.6rem;
+}
+.card__image {
+  width: 100%;
+  height: 16rem;
+  border: 1px solid #00B6CC;
+  border-radius: 1.6rem;
+  margin-bottom: 2rem;
+}
+.card__title {
+  font-size: clamp(1.6rem, 1.1458333333vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.card__text {
+  font-size: clamp(1.4rem, 0.9375vw, 1.8rem);
+  margin-bottom: 5rem;
+}
+.card__btn {
+  width: 100%;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 1.4rem 0;
+  color: #fff;
+  background-color: #00B6CC;
+  border: 1px solid #00B6CC;
+  border-radius: 1.6rem;
+  transition: color 0.5s, background-color 0.5s;
+}
+.card__btn:hover {
+  color: #00B6CC;
+  background-color: transparent;
+}
+
+@media screen and (width < 1024px) {
+  .card-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (width < 768px) {
+  .possibilities {
+    padding: 3rem 0;
+  }
+  .card-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (width < 568px) {
+  .card-box {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .card {
+    width: 32rem;
   }
 }
 
