@@ -509,6 +509,7 @@ body.active {
   text-align: center;
   border: 1px solid #fff;
   box-shadow: 5px 5px 15px #fff, -5px -5px 15px #fff;
+  border-radius: 1.6rem;
 }
 
 @media screen and (width < 768px) {
