@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      ,
+      maximum-scale="1.0"
+      ,
+      minimum-scale="1.0"
+    />
+    <link href="./style/index.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.svg" />
+    <title>i5s.ru</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper container">
+        <a class="header__logo logo" href="/">
+          <img
+            class="logo__image"
+            src="./images/logo.svg"
+            alt="i5s.ru"
+            width="100"
+            height="30"
+            loading="lazy"
+          />
+        </a>
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="/">Возможности</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="/">О системе</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="/">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__button button button-transparent hidden-mobile">
+          Запросить демо
+        </button>
+        <button class="header__burger burger-button visible-mobile"></button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="hero__area">
+          <ul class="hero__circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="hero__wrapper container">
+          <h1 class="hero__title">
+            Система <span class="accent-color">5s</span> с машинным зрением
+          </h1>
+          <div class="hero_description">
+            <p>
+              Автоматизация контроля на производстве и складе: техника, СИЗ,
+              перемещение персонала (включая спагетти-диаграммы), учёт запасов,
+              безопасность и многое другое. Интеграция с ERP и
+              <span class="accent-color">РЕ:СУРС</span> для расширения
+              возможностей.
+            </p>
+          </div>
+          <button class="hero__button button">
+            <span>Подробнее</span>
+            <img src="./images/icons/arrow-down.svg" alt="" />
+          </button>
+          <div class="hero__partners">
+            <ul class="hero__partners__list">
+              <li class="hero__partners__item">
+                <img
+                  class="hero__partners__image"
+                  src="./images/partners/argo.svg"
+                  alt=""
+                />
+              </li>
+              <li class="hero__partners__item">|</li>
+              <li class="hero__partners__item">
+                <img
+                  class="hero__partners__image"
+                  src="./images/partners/resurs.svg"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="services">
+        <div class="services__wrapper container">
+          <header class="services__header">
+            <h2 class="services__title black-bg">Возможности</h2>
+            <div class="services__description">
+              <p>
+                Ознакомтесь с перечнем наших возможностей <br />
+                для упрощения ведения вашего бизнеса
+              </p>
+            </div>
+          </header>
+          <div class="services__list">
+            <li class="services__item">
+              <article class="service-card">
+                <div class="service-card__header">
+                  <img
+                    class="service-card__image"
+                    src="./images/services/screenshot1.jpg"
+                    alt="box"
+                  />
+                  <h3 class="service-card__title black-bg">Machine Control</h3>
+                  <p class="service-card__text">
+                    Автоматический мониторинг состояния оборудования и машин.
+                    Система распознаёт запуск, простой и аварийные ситуации.
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <a class="service-card__link" href="#">
+                    <img
+                      class="service-card__link-image"
+                      src="./images/icons/arrow-top-right.svg"
+                      alt=""
+                    />
+                    <span class="service-card__link-label">Узнать больше</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="services__item">
+              <article class="service-card">
+                <div class="service-card__header">
+                  <img
+                    class="service-card__image"
+                    src="./images/services/screenshot2.jpg"
+                    alt="box"
+                  />
+                  <h3 class="service-card__title black-bg">Safety Controll</h3>
+                  <p class="service-card__text">
+                    Контроль ношения СИЗ: каски, очки, спецодежда.
+                    Предупреждения в реальном времени, сводные отчёты о
+                    нарушениях.
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <a class="service-card__link" href="#">
+                    <img
+                      class="service-card__link-image"
+                      src="./images/icons/arrow-top-right.svg"
+                      alt=""
+                    />
+                    <span class="service-card__link-label">Узнать больше</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="services__item">
+              <article class="service-card">
+                <div class="service-card__header">
+                  <img
+                    class="service-card__image"
+                    src="./images/services/screenshot3.jpg"
+                    alt="box"
+                  />
+                  <h3 class="service-card__title black-bg">
+                    Employee Monitoring
+                  </h3>
+                  <p class="service-card__text">
+                    Отслеживание присутствия и активности персонала. Помогает
+                    повысить эффективность труда и избегать «простоев».
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <a class="service-card__link" href="#">
+                    <img
+                      class="service-card__link-image"
+                      src="./images/icons/arrow-top-right.svg"
+                      alt=""
+                    />
+                    <span class="service-card__link-label">Узнать больше</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="services__item">
+              <article class="service-card">
+                <div class="service-card__header">
+                  <img
+                    class="service-card__image"
+                    src="./images/services/screenshot4.jpg"
+                    alt="box"
+                  />
+                  <h3 class="service-card__title black-bg">
+                    Inventory Control
+                  </h3>
+                  <p class="service-card__text">
+                    Управление складскими запасами в реальном времени.
+                    Оптимизация размещения и сокращение излишков.
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <a class="service-card__link" href="#">
+                    <img
+                      class="service-card__link-image"
+                      src="./images/icons/arrow-top-right.svg"
+                      alt=""
+                    />
+                    <span class="service-card__link-label">Узнать больше</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="services__item">
+              <article class="service-card">
+                <div class="service-card__header">
+                  <img
+                    class="service-card__image"
+                    src="./images/services/screenshot5.jpg"
+                    alt="box"
+                  />
+                  <h3 class="service-card__title black-bg">
+                    Material Management
+                  </h3>
+                  <p class="service-card__text">
+                    Полный контроль материалов: поступление, хранение,
+                    перемещение. Интеграция с учётными системами.
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <a class="service-card__link" href="#">
+                    <img
+                      class="service-card__link-image"
+                      src="./images/icons/arrow-top-right.svg"
+                      alt=""
+                    />
+                    <span class="service-card__link-label">Узнать больше</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="services__item">
+              <article class="service-card">
+                <div class="service-card__header">
+                  <img
+                    class="service-card__image"
+                    src="./images/services/screenshot6.jpg"
+                    alt="box"
+                  />
+                  <h3 class="service-card__title black-bg">Tool Control</h3>
+                  <p class="service-card__text">
+                    Учёт и отслеживание инструмента. Уменьшение потерь и
+                    оптимизация использования оборудования.
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <a class="service-card__link" href="#">
+                    <img
+                      class="service-card__link-image"
+                      src="./images/icons/arrow-top-right.svg"
+                      alt=""
+                    />
+                    <span class="service-card__link-label">Узнать больше</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="services__item">
+              <article class="service-card">
+                <div class="service-card__header">
+                  <img
+                    class="service-card__image"
+                    src="./images/services/screenshot7.jpg"
+                    alt="box"
+                  />
+                  <h3 class="service-card__title black-bg">
+                    Time & Attendance
+                  </h3>
+                  <p class="service-card__text">
+                    Подробная статистика рабочего времени, автоматизированное
+                    формирование табелей и спагетти-диаграмм перемещений.
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <a class="service-card__link" href="#">
+                    <img
+                      class="service-card__link-image"
+                      src="./images/icons/arrow-top-right.svg"
+                      alt=""
+                    />
+                    <span class="service-card__link-label">Узнать больше</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="services__item">
+              <article class="service-card">
+                <div class="service-card__header">
+                  <img
+                    class="service-card__image"
+                    src="./images/services/screenshot8.jpg"
+                    alt="box"
+                  />
+                  <h3 class="service-card__title black-bg">
+                    Integration with ERP
+                  </h3>
+                  <p class="service-card__text">
+                    Быстрая и надёжная синхронизация с существующими
+                    ERP-системами для обмена данными в режиме реального времени.
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <a class="service-card__link" href="#">
+                    <img
+                      class="service-card__link-image"
+                      src="./images/icons/arrow-top-right.svg"
+                      alt=""
+                    />
+                    <span class="service-card__link-label">Узнать больше</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="services__item">
+              <article class="service-card">
+                <div class="service-card__header">
+                  <img
+                    class="service-card__image"
+                    src="./images/services/screenshot9.jpg"
+                    alt="box"
+                  />
+                  <h3 class="service-card__title black-bg">Heat Map</h3>
+                  <p class="service-card__text">
+                    Визуальные «тепловые» карты перемещений. Помогают понять,
+                    где возникают «пробки» и неэффективность.
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <a class="service-card__link" href="#">
+                    <img
+                      class="service-card__link-image"
+                      src="./images/icons/arrow-top-right.svg"
+                      alt=""
+                    />
+                    <span class="service-card__link-label">Узнать больше</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="services__item">
+              <article class="service-card">
+                <div class="service-card__header">
+                  <img
+                    class="service-card__image"
+                    src="./images/services/screenshot10.jpg"
+                    alt="box"
+                  />
+                  <h3 class="service-card__title black-bg">
+                    Operation Control
+                  </h3>
+                  <p class="service-card__text">
+                    Непрерывный мониторинг производственных процессов с
+                    формированием ключевых показателей (KPI).
+                  </p>
+                </div>
+                <div class="service-card__footer">
+                  <a class="service-card__link" href="#">
+                    <img
+                      class="service-card__link-image"
+                      src="./images/icons/arrow-top-right.svg"
+                      alt=""
+                    />
+                    <span class="service-card__link-label">Узнать больше</span>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="services__item">
+              <article class="service-card">
+                <div class="service-card__header">
+                  <img
+                    class="service-card__image"
+                    src="./images/services/tech.webp"
+                    alt="box"
+                  />
+                  <h3 class="service-card__title black-bg">Cooming Soon</h3>
+                  <p class="service-card__text">Новые модули в разработке.</p>
+                </div>
+                <div class="service-card__footer">
+                  <!-- <a class="service-card__link" href="#">
+                    <img
+                      class="service-card__link-image"
+                      src="./images/icons/arrow-top-right.svg"
+                      alt=""
+                    />
+                    <span class="service-card__link-label">Узнать больше</span>
+                  </a> -->
+                </div>
+              </article>
+            </li>
+            <li class="services__item">
+              <article class="service-card">
+                <div class="service-card__header">
+                  <img
+                    class="service-card__image"
+                    src="./images/services/tech.webp"
+                    alt="box"
+                  />
+                  <h3 class="service-card__title black-bg">Cooming Soon</h3>
+                  <p class="service-card__text">Новые модули в разработке.</p>
+                </div>
+                <div class="service-card__footer">
+                  <!-- <a class="service-card__link" href="#">
+                    <img
+                      class="service-card__link-image"
+                      src="./images/icons/arrow-top-right.svg"
+                      alt=""
+                    />
+                    <span class="service-card__link-label">Узнать больше</span>
+                  </a> -->
+                </div>
+              </article>
+            </li>
+          </div>
+          <div class="services__banner">
+            <div class="services__banner-content">
+              <h3 class="services__banner-title">
+                Хотите быть в курсе наших новых разработок?
+              </h3>
+              <div class="services__banner-text">
+                Подпишитесь на наши новости, чтобы узнавать первыми <br />
+                о выходе новых модулей. Никакого спама, только новости.
+              </div>
+              <form class="services__banner-form">
+                <input
+                  class="services__banner-input"
+                  type="email"
+                  placeholder="Введите ваш Email"
+                />
+                <button class="services__banner-button" type="submit">
+                  Подписаться
+                </button>
+              </form>
+            </div>
+            <img
+              class="services__banner-image hidden-mobile"
+              src="./images/email.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__wrapper container">
+          <header class="about__header">
+            <h2 class="about__title black-bg">Cистема 5S</h2>
+            <div class="about__description">
+              <p>
+                5S – это пять японских слов, описывающих цикл, <br> состоящий из последовательных шагов (five steps).
+              </p>
+            </div>
+          </header>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
