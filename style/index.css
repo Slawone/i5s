@@ -560,7 +560,7 @@ p {
 }
 @media (max-width: 767px) {
   .hero {
-    min-height: calc(80vh - var(--header-height));
+    min-height: calc(90vh - var(--header-height));
   }
 }
 .hero__wrapper {
