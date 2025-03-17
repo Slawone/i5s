@@ -29,6 +29,10 @@
     counter-reset: custom-counter;
     list-style: none;
 
+    ::-webkit-details-marker {
+      display: none;
+    }
+
     @include mobile {
       row-gap: 20px;
     }
@@ -116,7 +120,6 @@
       &::before,
       &::after {
         // @include abs-center;
-
 
         content: '';
 
