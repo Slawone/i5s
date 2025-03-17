@@ -863,11 +863,13 @@ p {
 }
 .steps__accordion-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   column-gap: 50px;
   cursor: pointer;
   user-select: none;
+}
+.steps__accordion-header::-webkit-details-marker {
+  display: none;
 }
 @media (max-width: 767px) {
   .steps__accordion-header {
@@ -905,6 +907,7 @@ p {
   background-color: var(--color-accent);
   border: 2px solid var(--color-light);
   border-radius: 50%;
+  margin-left: auto;
 }
 @media (max-width: 767px) {
   .steps__accordion-indicator {
