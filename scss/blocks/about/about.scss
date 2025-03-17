@@ -10,13 +10,136 @@
 
     @include mobile {
       flex-direction: column;
-      gap: 20px;
+      gap: 5px;
     }
   }
   &__title {
     @include mobile {
       width: 100%;
       text-align: center;
+    }
+  }
+}
+
+.steps {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    counter-reset: custom-counter;
+    list-style: none;
+
+    @include mobile {
+      row-gap: 20px;
+    }
+  }
+  &__item {
+    --counterContent: counter(custom-counter);
+
+    counter-increment: custom-counter;
+
+    &:nth-child(-n + 9) {
+      --counterContent: '0' counter(custom-counter);
+    }
+  }
+  &__accordion {
+    --indicatorVerticalRotate: 90deg;
+
+    padding: 20px 30px;
+    // background-color: var(--color-gray);
+    border: var(--border);
+    border-color: var(--color-accent);
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      color: var(--color-light);
+      background-color: var(--color-accent);
+    }
+
+    @include mobile {
+      padding: 10px;
+    }
+
+    &[open] {
+      --indicatorVerticalRotate: 0deg;
+
+      color: var(--color-light);
+      background-color: var(--color-accent);
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 50px;
+      cursor: pointer;
+      user-select: none;
+
+      @include mobile {
+        column-gap: 10px;
+      }
+    }
+    &-title {
+      @include fluid-text(30, 14);
+
+      display: flex;
+      align-items: center;
+      column-gap: 25px;
+
+      @include mobile {
+        column-gap: 20px;
+      }
+
+      &::before {
+        content: var(--counterContent);
+        font-size: 2em;
+
+        @include mobile {
+          font-size: 30px;
+        }
+      }
+    }
+    &-indicator {
+      @include flex-center;
+      @include square(58px);
+
+      flex-shrink: 0;
+      position: relative;
+      background-color: var(--color-accent);
+      border: 2px solid var(--color-light);
+      border-radius: 50%;
+
+      @include mobile {
+        width: 30px;
+      }
+
+      &::before,
+      &::after {
+        // @include abs-center;
+
+
+        content: '';
+
+        position: absolute;
+        left: 50%;
+        translate: -50%;
+
+        width: 45%;
+        height: 10%;
+        background-color: var(--color-light);
+      }
+
+      &::before {
+        rotate: var(--indicatorVerticalRotate);
+        transition-duration: var(--transition-duration);
+      }
+    }
+    &-body {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: var(--border);
+      border-color: var(--color-light);
+      line-height: 1.4;
     }
   }
 }
