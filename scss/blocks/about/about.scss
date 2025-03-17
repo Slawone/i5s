@@ -29,10 +29,6 @@
     counter-reset: custom-counter;
     list-style: none;
 
-    &::-webkit-details-marker {
-      display: none;
-    }
-
     @include mobile {
       row-gap: 20px;
     }
@@ -78,6 +74,10 @@
       column-gap: 50px;
       cursor: pointer;
       user-select: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
 
       @include mobile {
         column-gap: 10px;
