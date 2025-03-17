@@ -29,7 +29,7 @@
     counter-reset: custom-counter;
     list-style: none;
 
-    ::-webkit-details-marker {
+    &::-webkit-details-marker {
       display: none;
     }
 
