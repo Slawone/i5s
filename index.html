@@ -44,10 +44,7 @@
         <button class="header__button button button-transparent hidden-mobile">
           Запросить демо
         </button>
-        <button
-          class="header__burger burger visible-mobile"
-          type="button"
-        >
+        <button class="header__burger burger visible-mobile" type="button">
           <div class="burger__stick burger__stick_top"></div>
           <div class="burger__stick burger__stick_middle"></div>
           <div class="burger__stick burger__stick_bottom"></div>
@@ -603,6 +600,94 @@
           </div>
         </div>
       </section>
+      <section class="contacts">
+        <div class="contacts__wrapper container">
+          <header class="contacts__header">
+            <h2 class="contacts__title black-bg">Контакты</h2>
+            <div class="contacts__description">
+              <p>Связаться с нами</p>
+            </div>
+          </header>
+          <div class="contacts__body">
+            <form class="contacts__form">
+              <div class="contacts__form-field field">
+                <label class="field__label" for="name">Имя*</label>
+                <input
+                  class="field__input"
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Введите ваше имя"
+                />
+              </div>
+              <div class="contacts__form-field field">
+                <label class="field__label" for="email">Email*</label>
+                <input
+                  class="field__input"
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Введите ваш Email"
+                  required
+                />
+              </div>
+              <div class="contacts__form-field field">
+                <label class="field__label" for="message">Сообщение*</label>
+                <textarea
+                  class="field__input field__input--textarea"
+                  id="message"
+                  name="message"
+                  placeholder="Введите ваше cообщение"
+                  required
+                ></textarea>
+              </div>
+              <button class="contacts__form-button button" type="submit">
+                Отправить сообщение
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="footer__wrapper container">
+        <div class="footer__inner">
+          <div class="footer__contacts">
+            <ul class="footer__contacts-list">
+              <li class="footer__contacts-item">
+                <a class="footer__contacts-link" href="mailto: example@ya.ru"
+                  >Email: example@i5s.ru</a
+                >
+              </li>
+              <li class="footer__contacts-item">
+                <a class="footer__contacts-link" href="tel:+79999999999"
+                  >Телефон: +78997777777</a
+                >
+              </li>
+              <li class="footer__contacts-item">
+                <a class="footer__contacts-link" href=""
+                  >Телеграм: i5s.ru</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__banner">
+            <form class="footer__banner-form">
+              <input
+                class="footer__banner-input"
+                type="email"
+                placeholder="Введите ваш Email"
+              />
+              <button class="footer__banner-button" type="submit">
+                Подписаться на новости
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer__copytight">
+          <p>© 2025 i5s.ru — Все права защищены</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
