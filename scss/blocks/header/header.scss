@@ -48,7 +48,7 @@
       top: calc(var(--header-height) - 17px);
       left: -100%;
       z-index: 100;
-      background-color: aqua;
+      background-color: var(--color-accent);
 
       &.active {
         left: 0;
