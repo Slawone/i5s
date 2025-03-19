@@ -13,6 +13,7 @@
     <link href="./style/index.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.svg" />
     <title>i5s.ru</title>
+    <script type="module" src="./js/main.js"></script>
   </head>
   <body>
     <header class="header">
@@ -27,7 +28,7 @@
             loading="lazy"
           />
         </a>
-        <nav class="header__menu hidden-mobile">
+        <nav class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
               <a class="header__menu-link" href="/">Возможности</a>
@@ -43,7 +44,14 @@
         <button class="header__button button button-transparent hidden-mobile">
           Запросить демо
         </button>
-        <button class="header__burger burger-button visible-mobile"></button>
+        <button
+          class="header__burger burger visible-mobile"
+          type="button"
+        >
+          <div class="burger__stick burger__stick_top"></div>
+          <div class="burger__stick burger__stick_middle"></div>
+          <div class="burger__stick burger__stick_bottom"></div>
+        </button>
       </div>
     </header>
 

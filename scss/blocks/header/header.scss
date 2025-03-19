@@ -7,6 +7,7 @@
   border-bottom: 1px solid var(--color-dark);
 
   &__wrapper {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -36,6 +37,20 @@
       font-size: 16px;
     }
 
+    @include mobile {
+      width: 100%;
+      height: calc(100vh - var(--header-height));
+      position: absolute;
+      top: calc(var(--header-height) - 17px);
+      left: -100%;
+      z-index: 100;
+      background-color: aqua;
+
+      &.active {
+        left: 0;
+      }
+    }
+
     &-list {
       display: flex;
       align-items: center;
@@ -43,6 +58,13 @@
 
       @include desktop {
         column-gap: 20px;
+      }
+
+      @include mobile {
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 20px;
       }
     }
 
@@ -69,6 +91,17 @@
         background-color: var(--color-accent);
         transition-duration: inherit;
       }
+
+       @include mobile {
+        color: var(--color-light);
+        font-size: 22px;
+
+        @include hover {
+          &::after {
+          width: 0;
+        }
+        }
+       }
     }
   }
 

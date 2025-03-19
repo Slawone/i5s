@@ -257,6 +257,9 @@ body {
   color: var(--color-dark);
   background-color: var(--color-light);
 }
+body:has(.header__menu.active) {
+  overflow: hidden;
+}
 
 a,
 button,
@@ -359,6 +362,36 @@ p {
   padding: 5px 10px;
 }
 
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+}
+.burger__stick {
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+.burger.active {
+  position: relative;
+  padding: 10px 0;
+}
+.burger.active .burger__stick_top {
+  position: absolute;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+.burger.active .burger__stick_middle {
+  display: none;
+}
+.burger.active .burger__stick_bottom {
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
 .header {
   width: 100%;
   height: var(--header-height);
@@ -368,6 +401,7 @@ p {
   border-bottom: 1px solid var(--color-dark);
 }
 .header__wrapper {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -398,6 +432,20 @@ p {
     font-size: 16px;
   }
 }
+@media (max-width: 767px) {
+  .header__menu {
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    position: absolute;
+    top: calc(var(--header-height) - 17px);
+    left: -100%;
+    z-index: 100;
+    background-color: aqua;
+  }
+  .header__menu.active {
+    left: 0;
+  }
+}
 .header__menu-list {
   display: flex;
   align-items: center;
@@ -406,6 +454,14 @@ p {
 @media (max-width: 1279px) {
   .header__menu-list {
     column-gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .header__menu-list {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
   }
 }
 .header__menu-link {
@@ -434,6 +490,22 @@ p {
   height: 2px;
   background-color: var(--color-accent);
   transition-duration: inherit;
+}
+@media (max-width: 767px) {
+  .header__menu-link {
+    color: var(--color-light);
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) and (hover: hover) {
+  .header__menu-link:hover::after {
+    width: 0;
+  }
+}
+@media (max-width: 767px) and (hover: none) {
+  .header__menu-link:active::after {
+    width: 0;
+  }
 }
 .header__button {
   height: 48px;

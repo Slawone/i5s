@@ -1,0 +1,31 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+
+  &__stick {
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-accent);
+  }
+  &.active {
+    position: relative;
+    padding: 10px 0;
+    .burger__stick_top {
+      position: absolute;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+    }
+    .burger__stick_middle {
+      display: none;
+    }
+    .burger__stick_bottom {
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease;
+    }
+  }
+}
+
