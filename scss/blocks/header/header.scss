@@ -4,7 +4,11 @@
   display: flex;
   align-items: center;
   background-color: var(--color-light);
-  border-bottom: 1px solid var(--color-dark);
+  border-bottom: 1px solid var(--color-accent);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
 
   &__wrapper {
     position: relative;
@@ -92,16 +96,16 @@
         transition-duration: inherit;
       }
 
-       @include mobile {
+      @include mobile {
         color: var(--color-light);
         font-size: 22px;
 
         @include hover {
           &::after {
-          width: 0;
+            width: 0;
+          }
         }
-        }
-       }
+      }
     }
   }
 
