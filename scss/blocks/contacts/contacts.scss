@@ -19,7 +19,7 @@
       text-align: center;
     }
   }
-  
+
   &__body {
     padding: 60px 100px;
     background-color: var(--color-gray);
@@ -41,7 +41,7 @@
       // height: calc(100% - var(--contactUsOffsetY) * 2);
       height: 100%;
       aspect-ratio: 1;
-      background: url('../../../images/form-bg.svg') center/contain no-repeat;
+      background: url('./images/form-bg.svg') center/contain no-repeat;
 
       @include tablet {
         display: none;

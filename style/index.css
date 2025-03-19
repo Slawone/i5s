@@ -1053,7 +1053,7 @@ p {
   transform: translate(-50%, -50%);
   height: 100%;
   aspect-ratio: 1;
-  background: url("../../../images/form-bg.svg") center/contain no-repeat;
+  background: url("./images/form-bg.svg") center/contain no-repeat;
 }
 @media (max-width: 1023px) {
   .contacts__body::after {
