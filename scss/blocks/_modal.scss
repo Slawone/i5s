@@ -1,0 +1,47 @@
+.form-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-gray);
+  z-index: 200;
+  align-content: center;
+  display: none;
+  z-index: 300;
+
+  &.active {
+    display: block;
+  }
+}
+.modal {
+  background-color: var(--color-accent);
+  width: 500px;
+  margin-inline: auto;
+  padding: 50px 30px;
+  position: relative;
+  &__close-button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: url('../images/icons/close-btn.svg') center / contain no-repeat;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__form-button {
+    background-color: var(--color-light);
+    color: var(--color-gray-alt);
+    border: none;
+    height: 46px;
+    font-size: 20px;
+  }
+}

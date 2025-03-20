@@ -35,6 +35,24 @@ export const closeOpenNavAuto = () => {
   });
 };
 
+export const openModal = () => {
+  const openModalButton = document.querySelector('.header__button');
+  const formOverlay = document.querySelector('.form-overlay');
+
+  openModalButton.addEventListener('click', () => {
+    formOverlay.classList.add('active');
+  })
+}
+
+export const closeModal = () => {
+  const openModalButton = document.querySelector('.modal__close-button');
+  const formOverlay = document.querySelector('.form-overlay');
+
+  openModalButton.addEventListener('click', () => {
+    formOverlay.classList.remove('active');
+  })
+}
+
 export const scrollSection = (event) => {
   const targetValue = event.currentTarget.dataset.target;
   const $section = document.querySelector(`[data-name="${targetValue}"]`);

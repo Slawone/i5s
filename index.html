@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-      ,
-      maximum-scale="1.0"
-      ,
-      minimum-scale="1.0"
-    />
-    <link href="./style/index.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.svg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style/index.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.svg" />
     <title>i5s.ru</title>
     <script type="module" src="./js/main.js"></script>
   </head>
@@ -31,13 +24,28 @@
         <nav class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a class="header__menu-link" data-btn="menuLink" data-target="services">Возможности</a>
+              <a
+                class="header__menu-link"
+                data-btn="menuLink"
+                data-target="services"
+                >Возможности</a
+              >
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" data-btn="menuLink" data-target="about">О системе</a>
+              <a
+                class="header__menu-link"
+                data-btn="menuLink"
+                data-target="about"
+                >О системе</a
+              >
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" data-btn="menuLink" data-target="contacts">Контакты</a>
+              <a
+                class="header__menu-link"
+                data-btn="menuLink"
+                data-target="contacts"
+                >Контакты</a
+              >
             </li>
           </ul>
         </nav>
@@ -51,7 +59,6 @@
         </button>
       </div>
     </header>
-
     <main class="main">
       <section class="hero">
         <div class="hero__area">
@@ -81,7 +88,7 @@
               возможностей.
             </p>
           </div>
-          <button class="hero__button button"  data-target="services">
+          <button class="hero__button button" data-target="services">
             <span>Подробнее</span>
             <img src="./images/icons/arrow-down.svg" alt="" />
           </button>
@@ -665,9 +672,7 @@
                 >
               </li>
               <li class="footer__contacts-item">
-                <a class="footer__contacts-link" href=""
-                  >Телеграм: i5s.ru</a
-                >
+                <a class="footer__contacts-link" href="">Телеграм: i5s.ru</a>
               </li>
             </ul>
           </div>
@@ -689,5 +694,38 @@
         </div>
       </div>
     </footer>
+    <div class="form-overlay">
+      <form class="modal">
+        <button class="modal__close-button" type="button">
+          <!-- <img src="./images/icons/close-btn.svg" alt=""> -->
+        </button>
+        <div class="modal__body">
+          <div class="modal__form-field field">
+            <label class="field__label" for="name">Имя*</label>
+            <input
+              class="field__input"
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Введите ваше имя"
+            />
+          </div>
+          <div class="modal__form-field field">
+            <label class="field__label" for="email">Email*</label>
+            <input
+              class="field__input"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Введите ваш Email"
+              required
+            />
+          </div>
+          <button class="modal__form-button" type="submit">
+            Отправить сообщение
+          </button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

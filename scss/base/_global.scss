@@ -6,9 +6,10 @@ body {
   line-height: 1.28;
   color: var(--color-dark);
   background-color: var(--color-light);
+  overflow-y: scroll;
 
-  &:has(.header__menu.active) {
-    overflow: hidden;
+  &:has(.header__menu.active, .form-overlay.active) {
+    overflow-y: hidden;
   }
 }
 

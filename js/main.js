@@ -1,5 +1,7 @@
 import {
   handleBurgerClick,
+  openModal,
+  closeModal,
   scrollSection,
   closeOpenNavAuto,
   handleMenuItemClick,
@@ -15,3 +17,5 @@ heroButton.addEventListener('click', scrollSection);
 handleBurgerClick();
 handleMenuItemClick();
 closeOpenNavAuto();
+openModal();
+closeModal();
