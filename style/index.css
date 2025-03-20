@@ -473,6 +473,7 @@ p {
   display: inline-flex;
   align-items: center;
   height: 48px;
+  cursor: pointer;
 }
 @media (hover: hover) {
   .header__menu-link:hover::after {

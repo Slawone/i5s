@@ -16,7 +16,7 @@
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header" data-name="header">
       <div class="header__wrapper container">
         <a class="header__logo logo" href="/">
           <img
@@ -31,13 +31,13 @@
         <nav class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a class="header__menu-link" href="/">Возможности</a>
+              <a class="header__menu-link" data-btn="menuLink" data-target="services">Возможности</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="/">О системе</a>
+              <a class="header__menu-link" data-btn="menuLink" data-target="about">О системе</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="/">Контакты</a>
+              <a class="header__menu-link" data-btn="menuLink" data-target="contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -45,9 +45,9 @@
           Запросить демо
         </button>
         <button class="header__burger burger visible-mobile" type="button">
-          <div class="burger__stick burger__stick_top"></div>
-          <div class="burger__stick burger__stick_middle"></div>
-          <div class="burger__stick burger__stick_bottom"></div>
+          <span class="burger__stick burger__stick_top"></span>
+          <span class="burger__stick burger__stick_middle"></span>
+          <span class="burger__stick burger__stick_bottom"></span>
         </button>
       </div>
     </header>
@@ -81,7 +81,7 @@
               возможностей.
             </p>
           </div>
-          <button class="hero__button button">
+          <button class="hero__button button"  data-target="services">
             <span>Подробнее</span>
             <img src="./images/icons/arrow-down.svg" alt="" />
           </button>
@@ -106,7 +106,7 @@
           </div>
         </div>
       </section>
-      <section class="services">
+      <section class="services" data-name="services">
         <div class="services__wrapper container">
           <header class="services__header">
             <h2 class="services__title black-bg">Возможности</h2>
@@ -466,7 +466,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" data-name="about">
         <div class="about__wrapper container">
           <header class="about__header">
             <h2 class="about__title black-bg">Cистема 5S</h2>
@@ -600,7 +600,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" data-name="contacts">
         <div class="contacts__wrapper container">
           <header class="contacts__header">
             <h2 class="contacts__title black-bg">Контакты</h2>
